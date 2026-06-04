@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Game Settings - PacketRail Lite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&amp;family=JetBrains+Mono:wght@500;700&amp;family=Hanken+Grotesk:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#dce4e4",
+                        "surface-bright": "#333b3b",
+                        "on-secondary": "#5b005b",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#007031",
+                        "primary": "#e3fdff",
+                        "secondary": "#ffabf3",
+                        "on-primary-fixed-variant": "#004f53",
+                        "surface-container-lowest": "#081010",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#810081",
+                        "surface-dim": "#0d1515",
+                        "on-surface-variant": "#b9cacb",
+                        "surface": "#0d1515",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#00dce6",
+                        "surface-variant": "#2e3637",
+                        "inverse-surface": "#dce4e4",
+                        "primary-fixed": "#6ff6ff",
+                        "background": "#0d1515",
+                        "on-secondary-fixed": "#380038",
+                        "surface-container-highest": "#2e3637",
+                        "surface-container-low": "#151d1e",
+                        "secondary-fixed": "#ffd7f5",
+                        "inverse-on-surface": "#2a3232",
+                        "surface-container": "#192122",
+                        "primary-container": "#00f3ff",
+                        "on-primary": "#00373a",
+                        "on-tertiary": "#003915",
+                        "secondary-container": "#fe00fe",
+                        "surface-container-high": "#232b2c",
+                        "on-tertiary-fixed-variant": "#005322",
+                        "on-background": "#dce4e4",
+                        "tertiary-fixed": "#66ff8f",
+                        "outline": "#849495",
+                        "tertiary-fixed-dim": "#00e46b",
+                        "tertiary": "#e8ffe6",
+                        "secondary-fixed-dim": "#ffabf3",
+                        "on-secondary-container": "#500050",
+                        "outline-variant": "#3a494b",
+                        "tertiary-container": "#2cfc7b",
+                        "inverse-primary": "#00696f",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#00210a",
+                        "on-primary-container": "#006b71",
+                        "on-primary-fixed": "#002022",
+                        "surface-tint": "#00dce6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "32px",
+                        "gutter": "16px",
+                        "unit": "4px",
+                        "margin-mobile": "16px",
+                        "panel-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Sora"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-md": ["Sora"],
+                        "body-base": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Sora"],
+                        "score-xl": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-mono": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-base": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "score-xl": ["36px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.bg-blur-gameplay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB-MaLMi6vABXMm2_yPqOc_dX31aaUXCCJBbIMZhYHKMCjZrVGLyS6ILrlkIDbuqvpfVCGcPMug0qLHAlsNa-z9tzcL_a3b4hot7VbsjVMWZY4POuOpqifKVXivkRlctkW-CTSqJr12prijTP_3BwMGzWw1xcYcUs3CR5X2kBClNYHhYkJSGoTJUnCC1cjfAES6hhIPmcqb5vQkAaUpFUSiWhKVt9QK_appeAgTkyhG66S6YxZo28HCpHVw8XHnTjH_iCzxEZ-jtT8);
+    background-size: cover;
+    background-position: center
+    }
+/* Custom Range Slider Styling */
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent
+    }
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 0;
+    background: #00f3ff;
+    cursor: pointer;
+    margin-top: -6px;
+    box-shadow: 0 0 10px #00f3ff
+    }
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: rgba(0, 220, 230, 0.2)
+    }
+/* Glow Effects */
+.neon-border-primary {
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    box-shadow: inset 0 0 10px rgba(0, 243, 255, 0.1)
+    }
+.neon-border-secondary {
+    border: 1px solid rgba(254, 0, 254, 0.2);
+    box-shadow: inset 0 0 10px rgba(254, 0, 254, 0.1)
+    }</style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex items-center justify-center relative overflow-hidden font-body-base text-body-base">
+<!-- Blurred Gameplay Background Layer -->
+<div class="absolute inset-0 bg-blur-gameplay z-0" data-alt="A stylized, abstract cyberpunk hacking interface or neon arcade game background. Features dark deep space navy base with streaks of luminous cyan and bright magenta light trailing across the screen, suggesting high-velocity data packets or energetic rails. The entire scene is heavily blurred as if out of focus, serving as an atmospheric backdrop for a game menu overlay."></div>
+<div class="absolute inset-0 backdrop-blur-[32px] bg-background/60 z-0"></div>
+<!-- Main Settings Modal Content -->
+<main class="relative z-10 w-full max-w-[600px] px-margin-mobile md:px-0">
+<div class="bg-surface-container-low/80 backdrop-blur-xl border border-primary/20 shadow-[0_0_20px_rgba(0,243,255,0.15)] rounded-xl flex flex-col p-panel-padding neon-border-primary">
+<!-- Header -->
+<header class="flex justify-between items-center mb-8 border-b border-primary/10 pb-4">
+<h1 class="font-headline-md text-headline-md text-primary tracking-wide">SETTINGS</h1>
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="settings">settings</span>
+</header>
+<!-- Settings Content -->
+<div class="flex flex-col gap-8 flex-grow overflow-y-auto pr-2" style="max-height: 60vh;">
+<!-- Difficulty Setting -->
+<section class="flex flex-col gap-4">
+<h2 class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest">System Difficulty</h2>
+<div class="grid grid-cols-3 gap-unit">
+<button class="bg-surface-dim border border-primary/20 text-on-surface-variant py-2 font-label-mono text-label-mono hover:bg-primary/10 hover:text-primary transition-colors focus:bg-primary-container focus:text-on-primary-container focus:border-primary focus:shadow-[0_0_10px_#00f3ff]">Casual</button>
+<button class="bg-primary-container text-on-primary-container border border-primary shadow-[0_0_10px_#00f3ff] py-2 font-label-mono text-label-mono">Normal</button>
+<button class="bg-surface-dim border border-primary/20 text-on-surface-variant py-2 font-label-mono text-label-mono hover:bg-primary/10 hover:text-primary transition-colors focus:bg-primary-container focus:text-on-primary-container focus:border-primary focus:shadow-[0_0_10px_#00f3ff]">Hardcore</button>
+</div>
+</section>
+<!-- Speed Setting -->
+<section class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<h2 class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest">Packet Velocity</h2>
+<span class="font-score-xl text-score-xl text-primary text-[24px]">1.0x</span>
+</div>
+<div class="pt-2 pb-4">
+<input class="w-full" max="2.0" min="0.5" step="0.1" type="range" value="1.0"/>
+<div class="flex justify-between text-on-surface-variant/50 font-label-mono text-label-mono mt-2 text-[10px]">
+<span>Slow</span>
+<span>Standard</span>
+<span>Max Overdrive</span>
+</div>
+</div>
+</section>
+<!-- Input Help Section -->
+<section class="bg-surface-dim/50 border border-secondary/20 rounded-lg p-4 neon-border-secondary">
+<h2 class="font-label-mono text-label-mono text-secondary-fixed mb-4 uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="keyboard">keyboard</span>
+                        Input Diagnostics
+                    </h2>
+<ul class="flex flex-col gap-3 font-label-mono text-label-mono text-sm">
+<li class="flex items-center justify-between">
+<span class="text-on-surface">Pause Operation</span>
+<span class="bg-surface-container border border-outline-variant px-3 py-1 text-primary-fixed-dim rounded shadow-[inset_0_0_5px_rgba(0,220,230,0.1)]">SPACE</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface">Redirect Packet</span>
+<span class="flex gap-1">
+<span class="bg-surface-container border border-outline-variant px-2 py-1 text-primary-fixed-dim rounded shadow-[inset_0_0_5px_rgba(0,220,230,0.1)] material-symbols-outlined text-[16px]" data-icon="arrow_back">arrow_back</span>
+<span class="bg-surface-container border border-outline-variant px-2 py-1 text-primary-fixed-dim rounded shadow-[inset_0_0_5px_rgba(0,220,230,0.1)] material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</li>
+</ul>
+</section>
+</div>
+<!-- Footer Actions -->
+<footer class="mt-8 pt-6 border-t border-primary/10 flex flex-col gap-4">
+<button class="w-full bg-primary-container text-on-primary-container font-label-mono text-label-mono py-3 font-bold hover:shadow-[0_0_15px_#00f3ff] hover:bg-primary-fixed transition-all group flex justify-center items-center gap-2">
+<span class="material-symbols-outlined group-hover:animate-pulse" data-icon="save">save</span>
+                    SAVE &amp; RETURN
+                </button>
+<div class="grid grid-cols-2 gap-unit">
+<button class="bg-surface-dim border border-outline-variant text-on-surface-variant font-label-mono text-label-mono py-2 hover:text-primary hover:border-primary/50 transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="refresh">refresh</span>
+                        RESET PREFERENCES
+                    </button>
+<button class="bg-surface-dim border border-outline-variant text-on-surface-variant font-label-mono text-label-mono py-2 hover:text-primary hover:border-primary/50 transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="close">close</span>
+                        BACK TO GAME
+                    </button>
+</div>
+</footer>
+</div>
+</main>
+</body></html>

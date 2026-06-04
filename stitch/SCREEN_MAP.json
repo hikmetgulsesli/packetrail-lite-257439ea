@@ -1,0 +1,20 @@
+[
+  {
+    "screenId": "dbf248931baf42049c8245749393eb6f",
+    "name": "Gameplay - PacketRail Lite",
+    "type": "game",
+    "description": "Gameplay - PacketRail Lite screen",
+    "surfaceIds": [
+      "SURF_GAMEPLAY"
+    ]
+  },
+  {
+    "screenId": "6323f186739d4d5ea78380f182628bd3",
+    "name": "Game Settings - PacketRail Lite",
+    "type": "settings",
+    "description": "Game Settings - PacketRail Lite screen",
+    "surfaceIds": [
+      "SURF_GAME_SETTINGS"
+    ]
+  }
+]
