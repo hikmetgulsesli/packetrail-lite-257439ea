@@ -1,0 +1,159 @@
+[
+  {
+    "screenId": "dbf248931baf42049c8245749393eb6f",
+    "title": "Gameplay - PacketRail Lite",
+    "componentName": "GameplayPacketrailLite",
+    "file": "src/screens/GameplayPacketrailLite.tsx",
+    "buttons": 6,
+    "inputs": 0,
+    "links": 9,
+    "actions": [
+      {
+        "id": "settings-1",
+        "kind": "button",
+        "label": "Settings",
+        "index": 0
+      },
+      {
+        "id": "history-2",
+        "kind": "button",
+        "label": "History",
+        "index": 1
+      },
+      {
+        "id": "upgrade-engine-3",
+        "kind": "button",
+        "label": "UPGRADE ENGINE",
+        "index": 2
+      },
+      {
+        "id": "pause-4",
+        "kind": "button",
+        "label": "Pause",
+        "index": 3
+      },
+      {
+        "id": "restart-5",
+        "kind": "button",
+        "label": "Restart",
+        "index": 4
+      },
+      {
+        "id": "start-game-6",
+        "kind": "button",
+        "label": "START GAME",
+        "index": 5
+      },
+      {
+        "id": "dashboard-1",
+        "kind": "link",
+        "label": "Dashboard",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "arsenal-2",
+        "kind": "link",
+        "label": "Arsenal",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "leaderboard-3",
+        "kind": "link",
+        "label": "Leaderboard",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "support-4",
+        "kind": "link",
+        "label": "Support",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "exit-5",
+        "kind": "link",
+        "label": "Exit",
+        "href": "#",
+        "index": 4
+      },
+      {
+        "id": "engage-6",
+        "kind": "link",
+        "label": "Engage",
+        "href": "#",
+        "index": 5
+      },
+      {
+        "id": "loadout-7",
+        "kind": "link",
+        "label": "Loadout",
+        "href": "#",
+        "index": 6
+      },
+      {
+        "id": "intel-8",
+        "kind": "link",
+        "label": "Intel",
+        "href": "#",
+        "index": 7
+      },
+      {
+        "id": "systems-9",
+        "kind": "link",
+        "label": "Systems",
+        "href": "#",
+        "index": 8
+      }
+    ]
+  },
+  {
+    "screenId": "6323f186739d4d5ea78380f182628bd3",
+    "title": "Game Settings - PacketRail Lite",
+    "componentName": "GameSettingsPacketrailLite",
+    "file": "src/screens/GameSettingsPacketrailLite.tsx",
+    "buttons": 6,
+    "inputs": 1,
+    "links": 0,
+    "actions": [
+      {
+        "id": "casual-1",
+        "kind": "button",
+        "label": "Casual",
+        "index": 0
+      },
+      {
+        "id": "normal-2",
+        "kind": "button",
+        "label": "Normal",
+        "index": 1
+      },
+      {
+        "id": "hardcore-3",
+        "kind": "button",
+        "label": "Hardcore",
+        "index": 2
+      },
+      {
+        "id": "save-and-return-4",
+        "kind": "button",
+        "label": "SAVE and RETURN",
+        "index": 3
+      },
+      {
+        "id": "reset-preferences-5",
+        "kind": "button",
+        "label": "RESET PREFERENCES",
+        "index": 4
+      },
+      {
+        "id": "back-to-game-6",
+        "kind": "button",
+        "label": "BACK TO GAME",
+        "index": 5
+      }
+    ]
+  }
+]
