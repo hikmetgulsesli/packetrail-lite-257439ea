@@ -8,6 +8,8 @@ import { saveSession } from './features/packetrail-lite/packetrail-lite.repo';
 import { actStartGame } from './features/surf-gameplay/act_start_game';
 import { actPauseGame } from './features/surf-gameplay/act_pause_game';
 import { actRestartGame } from './features/surf-gameplay/act_restart_game';
+import { actSavePreferences } from './features/surf-game-settings/act_save_preferences';
+import { actReturnToGameplay } from './features/surf-game-settings/act_return_to_gameplay';
 
 type Screen = 'gameplay' | 'settings';
 
@@ -63,12 +65,14 @@ export default function App() {
   }, [runtime]);
 
   const handleSaveAndReturn = useCallback(() => {
+    actSavePreferences(runtime, { difficulty: runtime.state.difficulty });
     setScreen('gameplay');
-  }, []);
+  }, [runtime]);
 
   const handleBackToGame = useCallback(() => {
+    actReturnToGameplay(runtime);
     setScreen('gameplay');
-  }, []);
+  }, [runtime]);
 
   const handleResetPreferences = useCallback(() => {
     runtime.actions.setDifficulty('normal');
