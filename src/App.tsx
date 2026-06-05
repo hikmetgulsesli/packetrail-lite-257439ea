@@ -5,6 +5,9 @@ import {
 } from './screens';
 import { getOrCreateRuntime } from './features/packetrail-lite/packetrail-lite.store';
 import { saveSession } from './features/packetrail-lite/packetrail-lite.repo';
+import { actStartGame } from './features/surf-gameplay/act_start_game';
+import { actPauseGame } from './features/surf-gameplay/act_pause_game';
+import { actRestartGame } from './features/surf-gameplay/act_restart_game';
 
 type Screen = 'gameplay' | 'settings';
 
@@ -44,15 +47,15 @@ export default function App() {
   const goToGameplay = useCallback(() => setScreen('gameplay'), []);
 
   const handleStartGame = useCallback(() => {
-    runtime.actions.start();
+    actStartGame(runtime);
   }, [runtime]);
 
   const handlePause = useCallback(() => {
-    runtime.actions.pause();
+    actPauseGame(runtime);
   }, [runtime]);
 
   const handleRestart = useCallback(() => {
-    runtime.actions.restart();
+    actRestartGame(runtime);
   }, [runtime]);
 
   const handleResume = useCallback(() => {
