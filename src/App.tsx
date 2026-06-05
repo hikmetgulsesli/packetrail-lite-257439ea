@@ -18,6 +18,28 @@ export default function App() {
     return () => clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (screen !== 'gameplay') return;
+      if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') {
+        e.preventDefault();
+        runtime.actions.moveLeft();
+      } else if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') {
+        e.preventDefault();
+        runtime.actions.moveRight();
+      } else if (e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        if (runtime.state.paused) {
+          runtime.actions.resume();
+        } else {
+          runtime.actions.pause();
+        }
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [runtime, screen]);
+
   const goToSettings = useCallback(() => setScreen('settings'), []);
   const goToGameplay = useCallback(() => setScreen('gameplay'), []);
 
